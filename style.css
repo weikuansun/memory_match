@@ -1,0 +1,77 @@
+#header{
+    width:1000px;
+    height:110px;
+}
+#stats{
+    width:200px;
+    height:500px;
+    display:inline-block;}
+#game-area{
+    width:738px;
+    height:500px;
+    position:absolute;
+    top:18.5%;
+    right:47.5%;
+}
+h1{
+    color:white;
+}
+a{
+    color:white;
+}
+#a1{
+    position:absolute;
+    right:64%;
+    top:7.5%;
+}
+#a2{
+    position:absolute;
+    right:64%;
+    top:9.5%;
+}
+#header h1{
+    position:absolute;
+    right:60%;
+}
+#button{
+    margin-top:10%;
+    width:50%;
+    height:5%;
+}
+.label{
+    color:white;
+    font-size:12px;
+}
+.front .back{
+    margin:8%;
+}
+#game-area div{
+    margin-left:3%;
+    margin-top: 3%;
+}
+body{
+    /*background-image:url("http://img9.zol.com.cn/bizhi/800_1/19052.jpg");*/
+    background-color:black;
+    background-repeat:no-repeat;
+}
+#game-area img{
+    margin:100px;
+}
+#one img {position:absolute;top:-20%;left:40%;}
+#two img {position:absolute;top:-20%;left:50%;}
+#three img {position:absolute;top:-20%;left:60%;}
+#four img {position:absolute;top:-20%;left:70%;}
+#five img {position:absolute;top:-20%;left:80%;}
+#six img {position:absolute;top:-20%;left:90%;}
+#seven img {position:absolute;top:0%;left:40%;}
+#eight img {position:absolute;top:0%;left:50%;}
+#nine img {position:absolute;top:0%;left:60%;}
+#ten img {position:absolute;top:0%;left:70%;}
+#eleven img {position:absolute;top:0%;left:80%;}
+#twelve img {position:absolute;top:0%;left:90%;}
+#thirteen img {position:absolute;top:20%;left:40%;}
+#fourteen img {position:absolute;top:20%;left:50%;}
+#fifteen img {position:absolute;top:20%;left:60%;}
+#sixteen img {position:absolute;top:20%;left:70%;}
+#seventeen img {position:absolute;top:20%;left:80%;}
+#eighteen img {position:absolute;top:20%;left:90%;}

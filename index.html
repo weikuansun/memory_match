@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="header">
+        <h1>Memory Match</h1>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeWtmUBiod4B4Cavm0YJpnwHXbC3qKiRVbip9nJ53KLHmjUd8hWA" width="110" height="110">
+
+    </div>
+    <div id="stats">
+        <h1>Stats</h1>
+        <div class="games-played">
+            <div class="label">Games Played</div>
+            <div class="value" style="color:white;font-size:18px">0</div>
+        </div>
+        <div class="attempts">
+            <div class="label">Attempts</div>
+            <div class="value" style="color:white;font-size:18px">N/A</div>
+        </div>
+        <div class="accuracy">
+            <div class="label">Accuracy</div>
+            <div class="value" style="color:white;font-size:18px">N/A</div>
+        </div>
+        <div class="Time">
+            <div class="label">Time</div>
+            <div id="output" style="font-size:18px;color:white"></div>
+        </div>
+        <button id="button">Reset Game</button>
+    </div>
+    <div id="game-area">
+        <div class="card" id="one">
+            <div class="front"><img id="1" width="76.8" height="104.8"></div>
+            <div class="back"><img onclick="card_clicked(this)"  src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTazsghj-u9dwtQXdrqnwMg-yk3J1_Oal-M3CWodAZTLgr_ZvpQ" width="76.8" height="104.8"></div>
+        </div>
+
+        <div class="card" id="two">
+            <div class="front"><img id="2" src="http://www.sanguosha.com/images/23/123/1107/26/35/8014_10132235.PNG" width="76.8" height="104.8"></div>
+            <div class="back"><img onclick="card_clicked(this)" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTazsghj-u9dwtQXdrqnwMg-yk3J1_Oal-M3CWodAZTLgr_ZvpQ" width="76.8" height="104.8"></div>
+        </div>
+
+        <div class="card" id="three">
+            <div class="front"><img id="3" src="http://www.sanguosha.com/images/23/123/1107/25/41/1672_10124941.PNG" width="76.8" height="104.8"></div>
+            <div class="back"><img onclick="card_clicked(this)" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTazsghj-u9dwtQXdrqnwMg-yk3J1_Oal-M3CWodAZTLgr_ZvpQ" width="76.8" height="104.8"></div>
+        </div>
+        <div class="card" id="four">
+            <div class="front"><img id="4" src="http://www.sanguosha.com/images/23/123/1107/26/56/6958_10132256.PNG" width="76.8" height="104.8"></div>
+            <div class="back"><img onclick="card_clicked(this)" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTazsghj-u9dwtQXdrqnwMg-yk3J1_Oal-M3CWodAZTLgr_ZvpQ" width="76.8" height="104.8"></div>
+        </div>
+
+        <div class="card" id="five">
+            <div class="front"><img  id="5" src="http://www.sanguosha.com/images/23/123/1107/26/17/9963_10132317.PNG" width="76.8" height="104.8"></div>
+            <div class="back"><img onclick="card_clicked(this)" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTazsghj-u9dwtQXdrqnwMg-yk3J1_Oal-M3CWodAZTLgr_ZvpQ" width="76.8" height="104.8"></div>
+        </div>
+        <div class="card" id="six">
+            <div class="front"><img  id="6" src="http://www.sanguosha.com/images/23/123/1107/26/42/1828_10131942.PNG" width="76.8" height="104.8"></div>
+            <div class="back"><img onclick="card_clicked(this)" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTazsghj-u9dwtQXdrqnwMg-yk3J1_Oal-M3CWodAZTLgr_ZvpQ" width="76.8" height="104.8"></div>
+        </div>
+
+        <div class="card" id="seven">
+            <div class="front"><img  id="7" src="http://www.sanguosha.com/images/23/123/1107/26/89/8882_10132089.PNG" width="76.8" height="104.8"></div>
+            <div class="back"><img onclick="card_clicked(this)" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTazsghj-u9dwtQXdrqnwMg-yk3J1_Oal-M3CWodAZTLgr_ZvpQ" width="76.8" height="104.8"></div>
+        </div>
+
+       <div class="card" id="eight">
+           <div class="front"><img  id="8" src="http://www.sanguosha.com/images/23/123/1107/26/77/8449_10134977.PNG" width="76.8" height="104.8"></div>
+           <div class="back"><img onclick="card_clicked(this)" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTazsghj-u9dwtQXdrqnwMg-yk3J1_Oal-M3CWodAZTLgr_ZvpQ" width="76.8" height="104.8"></div>
+       </div>
+       <div class="card" id="nine">
+           <div class="front"><img  id="9" src="http://www.sanguosha.com/images/23/123/1107/26/94/4392_10134994.PNG" width="76.8" height="104.8"></div>
+           <div class="back"><img onclick="card_clicked(this)" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTazsghj-u9dwtQXdrqnwMg-yk3J1_Oal-M3CWodAZTLgr_ZvpQ" width="76.8" height="104.8"></div>
+       </div>
+       <div class="card" id="ten">
+           <div class="front"><img  id="10" src="http://www.sanguosha.com/images/23/123/1107/22/29/9856_10100029.PNG" width="76.8" height="104.8"></div>
+           <div class="back"><img onclick="card_clicked(this)" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTazsghj-u9dwtQXdrqnwMg-yk3J1_Oal-M3CWodAZTLgr_ZvpQ" width="76.8" height="104.8"></div>
+       </div>
+       <div class="card" id="eleven">
+           <div class="front"><img  id="11" src="http://www.sanguosha.com/images/23/123/1107/25/41/1672_10124941.PNG" width="76.8" height="104.8"></div>
+           <div class="back"><img onclick="card_clicked(this)" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTazsghj-u9dwtQXdrqnwMg-yk3J1_Oal-M3CWodAZTLgr_ZvpQ" width="76.8" height="104.8"></div>
+       </div>
+       <div class="card" id="twelve">
+           <div class="front"><img  id="12" src="http://www.sanguosha.com/images/23/123/1107/26/17/9963_10132317.PNG" width="76.8" height="104.8"></div>
+           <div class="back"><img onclick="card_clicked(this)" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTazsghj-u9dwtQXdrqnwMg-yk3J1_Oal-M3CWodAZTLgr_ZvpQ" width="76.8" height="104.8"></div>
+       </div>
+
+       <div class="card" id="thirteen">
+           <div class="front"><img  id="13" src="http://www.sanguosha.com/images/23/123/1107/26/56/6958_10132256.PNG" width="76.8" height="104.8"></div>
+           <div class="back"><img onclick="card_clicked(this)" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTazsghj-u9dwtQXdrqnwMg-yk3J1_Oal-M3CWodAZTLgr_ZvpQ" width="76.8" height="104.8"></div>
+       </div>
+       <div class="card" id="fourteen">
+           <div class="front"><img  id="14" src="http://www.sanguosha.com/images/23/123/1107/26/89/8882_10132089.PNG" width="76.8" height="104.8"></div>
+           <div class="back"><img onclick="card_clicked(this)" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTazsghj-u9dwtQXdrqnwMg-yk3J1_Oal-M3CWodAZTLgr_ZvpQ" width="76.8" height="104.8"></div>
+       </div>
+       <div class="card" id="fifteen">
+           <div class="front"><img  id="15" src="http://www.sanguosha.com/images/23/123/1107/26/42/1828_10131942.PNG" width="76.8" height="104.8"></div>
+           <div class="back"><img onclick="card_clicked(this)" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTazsghj-u9dwtQXdrqnwMg-yk3J1_Oal-M3CWodAZTLgr_ZvpQ" width="76.8" height="104.8"></div>
+       </div>
+       <div class="card" id="sixteen">
+           <div class="front"><img  id="16"src="http://www.sanguosha.com/images/23/123/1107/26/35/8014_10132235.PNG" width="76.8" height="104.8"></div>
+           <div class="back"><img onclick="card_clicked(this)" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTazsghj-u9dwtQXdrqnwMg-yk3J1_Oal-M3CWodAZTLgr_ZvpQ" width="76.8" height="104.8"></div>
+       </div>
+       <div class="card" id="seventeen">
+           <div class="front"><img  id="17"src="http://www.sanguosha.com/images/23/123/1107/26/77/8449_10134977.PNG" width="76.8" height="104.8"></div>
+           <div class="back"><img onclick="card_clicked(this)" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTazsghj-u9dwtQXdrqnwMg-yk3J1_Oal-M3CWodAZTLgr_ZvpQ" width="76.8" height="104.8"></div>
+       </div>
+       <div class="card" id="eighteen">
+           <div class="front"><img  id="18" src="http://www.sanguosha.com/images/23/123/1107/26/94/4392_10134994.PNG" width="76.8" height="104.8"></div>
+           <div class="back"><img onclick="card_clicked(this)" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTazsghj-u9dwtQXdrqnwMg-yk3J1_Oal-M3CWodAZTLgr_ZvpQ" width="76.8" height="104.8"></div>
+       </div>
+
+
+
+    </div>
+</body>
+</html>
